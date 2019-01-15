@@ -8,7 +8,6 @@ public class Lab3 {
 		Scanner scan = new Scanner (System.in);
 		int iNum = 0;
 		String name = "";
-		String str1 = "";
 		char cont = 'n';
 		
 		do {
@@ -23,14 +22,14 @@ public class Lab3 {
 		if (iNum < 1) {
 			System.out.println("Invalid input! Please enter a number between 1 and 100.");
 		}
-		}while (iNum < 1 || iNum >100);
+		}while (iNum < 1 || iNum > 100);
 			
 		if (iNum % 2 != 0 && iNum <= 60) {
-			System.out.println(name + ", your number is Odd.");
+			System.out.println(name + ", your number is " + iNum + " and it is Odd.");
 		}
 		
 		else if (iNum % 2 == 0 && iNum >= 2 && iNum <= 25) {
-			System.out.println(name + ", your number is Even and less than 25.");
+			System.out.println(name + ", your number is Even and less than or equal to 25.");
 		}
 		
 		else if (iNum % 2 == 0 && iNum >= 26 && iNum <= 60) {
@@ -38,18 +37,19 @@ public class Lab3 {
 		}
 		
 		else if (iNum % 2 == 0 && iNum > 60) {
-			System.out.println(name + ", your number is Even.");
+			System.out.println(name + ", your number is " + iNum + ". Even.");
 		}
 		
 		else if (iNum % 2 != 0 && iNum > 60) {
-			System.out.println(name + ", your number is Odd and over 60");
+			System.out.println(name + ", your number is " + iNum + ". It is Odd and over 60");
 		}
 		
 		do {
 		System.out.println("Would you like to play again " + name + "? (y/n)");
-		//cont = scan.nextLine();
 		cont = scan.next().charAt(0);
-		str1 = scan.nextLine(); //this is done to consume the new line from scan.next()
+		scan.nextLine(); //this is done to consume the new line from scan.next()
+		
+		System.out.println();
 		if (cont != 'n' && cont != 'N' && cont != 'y' && cont != 'Y') {
 			System.out.println("Invalid input! Please try again. ");
 		}
