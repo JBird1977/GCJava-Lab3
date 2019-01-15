@@ -17,10 +17,14 @@ public class Lab3 {
 		
 		System.out.print("Please enter your name: ");
 		name = scan.nextLine();
-		
+		do {
 		System.out.println(name + ", please enter an integer from 1 to 100: ");
 		iNum = scan.nextInt();
-		
+		if (iNum < 1) {
+			System.out.println("Invalid input! Please enter a number between 1 and 100.");
+		}
+		}while (iNum < 1 || iNum >100);
+			
 		if (iNum % 2 != 0 && iNum <= 60) {
 			System.out.println(name + ", your number is Odd.");
 		}
